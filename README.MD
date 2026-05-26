@@ -153,7 +153,7 @@ IOT/
 
 ## 👨‍💻 Autor
 
-Desenvolvido como **requisito de avaliação acadêmica**
+Desenvolvido como **Requisito de Avaliação Acadêmica:**
 
 **Felipe Barbosa Miranda**
 
