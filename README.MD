@@ -153,11 +153,13 @@ IOT/
 
 ## 👨‍💻 Autor
 
+Desenvolvido como **requisito de avaliação acadêmica**
+
 **Felipe Barbosa Miranda**
 
 ---
 
 <p align="center">
-  <sub> Automação Residencial &copy; 2026 — Desenvolvido como requisito de avaliação acadêmica para a disciplina de Internet das Coisas (IoT)</sub>
+  <sub> Automação Residencial &copy; 2026 — Disciplina de Internet das Coisas (IoT)</sub>
 </p>
 
