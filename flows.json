@@ -1,0 +1,608 @@
+[
+    {
+        "id": "1dc88a475c517e98",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3039ca466c0eabe8",
+        "type": "mqtt in",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "topic": "residencia/sensores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "81175c621c5f7030",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "59be09a7d5439801",
+                "43a140bf31f5e065",
+                "73eeac740fdd2220",
+                "ed0a6a495d709cab",
+                "836c4f1e6bbc194d",
+                "aa7cc0a7217c4923"
+            ]
+        ]
+    },
+    {
+        "id": "59be09a7d5439801",
+        "type": "change",
+        "z": "1dc88a475c517e98",
+        "name": "Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "c2eca6ebb74b4997"
+            ]
+        ]
+    },
+    {
+        "id": "c2eca6ebb74b4997",
+        "type": "ui_gauge",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "group": "7358be827924fb88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "43a140bf31f5e065",
+        "type": "change",
+        "z": "1dc88a475c517e98",
+        "name": "Umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.umid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "3d9afd38f400dbaf"
+            ]
+        ]
+    },
+    {
+        "id": "3d9afd38f400dbaf",
+        "type": "ui_gauge",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "group": "7358be827924fb88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 720,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "73eeac740fdd2220",
+        "type": "change",
+        "z": "1dc88a475c517e98",
+        "name": "Luz",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.luz",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "6c83935998911e1d"
+            ]
+        ]
+    },
+    {
+        "id": "6c83935998911e1d",
+        "type": "ui_gauge",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "group": "7358be827924fb88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Luminosidade",
+        "label": "Luz",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 740,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ed0a6a495d709cab",
+        "type": "change",
+        "z": "1dc88a475c517e98",
+        "name": "Gas",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.gas",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "1c12e139e71de65a"
+            ]
+        ]
+    },
+    {
+        "id": "1c12e139e71de65a",
+        "type": "ui_gauge",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "group": "7358be827924fb88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Nível de Gás",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "836c4f1e6bbc194d",
+        "type": "change",
+        "z": "1dc88a475c517e98",
+        "name": "Distancia",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.dist",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 640,
+        "wires": [
+            [
+                "d093c1de793b227f"
+            ]
+        ]
+    },
+    {
+        "id": "d093c1de793b227f",
+        "type": "ui_gauge",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "group": "7358be827924fb88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Distância",
+        "label": "cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "400",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 720,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "43bd2a6108276b55",
+        "type": "mqtt out",
+        "z": "1dc88a475c517e98",
+        "name": "Enviar Comandos",
+        "topic": "residencia/atuadores",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "81175c621c5f7030",
+        "x": 1330,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2faab03966837fa9",
+        "type": "ui_switch",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "label": "Alarme de Gás (LED Vermelho)",
+        "tooltip": "",
+        "group": "7358be827924fb88",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "vermelho_on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "vermelho_off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1010,
+        "y": 260,
+        "wires": [
+            [
+                "43bd2a6108276b55"
+            ]
+        ]
+    },
+    {
+        "id": "0d6259bba7bc8212",
+        "type": "ui_switch",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "label": "Luz da Sala (LED Amarelo)",
+        "tooltip": "",
+        "group": "7358be827924fb88",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "amarelo_on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "amarelo_off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            [
+                "43bd2a6108276b55"
+            ]
+        ]
+    },
+    {
+        "id": "e4f607ac1bf1c23c",
+        "type": "ui_switch",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "label": "Ar Condicionado (LED Azul)",
+        "tooltip": "",
+        "group": "7358be827924fb88",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "azul_on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "azul_off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1000,
+        "y": 420,
+        "wires": [
+            [
+                "43bd2a6108276b55"
+            ]
+        ]
+    },
+    {
+        "id": "e2c40b35f2eb7aa2",
+        "type": "ui_switch",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "label": "Controle da Porta (Servo)",
+        "tooltip": "",
+        "group": "7358be827924fb88",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "porta_abrir",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "porta_fechar",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 990,
+        "y": 500,
+        "wires": [
+            [
+                "43bd2a6108276b55"
+            ]
+        ]
+    },
+    {
+        "id": "aa7cc0a7217c4923",
+        "type": "delay",
+        "z": "1dc88a475c517e98",
+        "name": "delay",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "392e5cf41789cb9a"
+            ]
+        ]
+    },
+    {
+        "id": "392e5cf41789cb9a",
+        "type": "function",
+        "z": "1dc88a475c517e98",
+        "name": "function 1",
+        "func": "// Tenta ler o JSON vindo do ESP32 de qualquer formato\nvar dados;\ntry {\n    if (typeof msg.payload === \"object\" && !Buffer.isBuffer(msg.payload)) {\n        dados = msg.payload;\n    } else {\n        dados = JSON.parse(msg.payload.toString());\n    }\n} catch (e) {\n    node.error(\"Erro ao decodificar JSON do ESP32.\");\n    return null;\n}\n\n// Sua URL oficial do Google\nvar urlGoogle = \"https://script.google.com/macros/s/AKfycbzxjJOfhBkb9zn5ZXliz6os4opw8tNbG2hV_d8ZIy9mOqsFYD1w3DGFrPZohJeYh88c/exec\";\n\n// Monta o link com os valores exatos dos sensores\nmsg.url = urlGoogle + \"?tipo=log\" +\n    \"&t=\" + dados.temp +\n    \"&u=\" + dados.umid +\n    \"&l=\" + dados.luz +\n    \"&g=\" + dados.gas +\n    \"&d=\" + dados.dist;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "b2b5735b5f2955bf"
+            ]
+        ]
+    },
+    {
+        "id": "b2b5735b5f2955bf",
+        "type": "http request",
+        "z": "1dc88a475c517e98",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 620,
+        "y": 160,
+        "wires": [
+            [
+                "d9dd096419176e4d"
+            ]
+        ]
+    },
+    {
+        "id": "d9dd096419176e4d",
+        "type": "debug",
+        "z": "1dc88a475c517e98",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "81175c621c5f7030",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7358be827924fb88",
+        "type": "ui_group",
+        "name": "Sensores",
+        "tab": "fa8d1520bf94b419",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fa8d1520bf94b419",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c4ddb62de4a17e67",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

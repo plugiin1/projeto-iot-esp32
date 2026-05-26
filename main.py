@@ -66,7 +66,61 @@ def sub_cb(topic, msg):
     elif c == 'porta_fechar': servo.duty(40)
 
 def web_page():
-    return '<html><head><style>.b{padding:10px;margin:5px;}</style></head><body><h1>ESP32 Mogi</h1><a href="/?led_red=on"><button class="b">Gas ON</button></a><a href="/?led_red=off"><button class="b">Gas OFF</button></a><br><a href="/?led_yellow=on"><button class="b">Sala ON</button></a><a href="/?led_yellow=off"><button class="b">Sala OFF</button></a><br><a href="/?led_blue=on"><button class="b">Ar ON</button></a><a href="/?led_blue=off"><button class="b">Ar OFF</button></a><br><a href="/?servo=open"><button class="b">Porta Abrir</button></a><a href="/?servo=close"><button class="b">Porta Fechar</button></a></body></html>'
+    return '''
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body{font-family:sans-serif;padding:1rem;max-width:500px;margin:auto}
+  h1{font-size:1.2rem;margin-bottom:1rem}
+  .card{border:1px solid #ddd;border-radius:8px;padding:1rem;margin-bottom:.75rem}
+  .label{font-size:.75rem;color:#888;margin-bottom:.5rem}
+  .row{display:flex;gap:8px;flex-wrap:wrap}
+  a{text-decoration:none}
+  button{padding:8px 16px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer;font-size:.9rem}
+  button:hover{background:#f0f0f0}
+  .on{background:#d4edda;border-color:#28a745;color:#155724}
+  .off{background:#f8d7da;border-color:#dc3545;color:#721c24}
+</style>
+</head>
+<body>
+<h1>ESP32 Automação Residencial</h1>
+
+<div class="card">
+  <div class="label">LED Vermelho — Alarme de gás</div>
+  <div class="row">
+    <a href="/?led_red=on"><button class="on">Ligar</button></a>
+    <a href="/?led_red=off"><button class="off">Desligar</button></a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="label">LED Amarelo — Iluminação sala</div>
+  <div class="row">
+    <a href="/?led_yellow=on"><button class="on">Ligar</button></a>
+    <a href="/?led_yellow=off"><button class="off">Desligar</button></a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="label">LED Azul — Ar-condicionado</div>
+  <div class="row">
+    <a href="/?led_blue=on"><button class="on">Ligar</button></a>
+    <a href="/?led_blue=off"><button class="off">Desligar</button></a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="label">Servo Motor — Porta / Portão</div>
+  <div class="row">
+    <a href="/?servo=open"><button class="on">Abrir (duty 115)</button></a>
+    <a href="/?servo=half"><button>Meio aberto (duty 77)</button></a>
+    <a href="/?servo=close"><button class="off">Fechar (duty 40)</button></a>
+  </div>
+</div>
+
+</body>
+</html>'''
 
 # ==========================================
 # INICIALIZAÇÃO (WIFI E MQTT)
@@ -111,6 +165,7 @@ while True:
             elif '/?led_blue=on' in req: led_blue.value(1)
             elif '/?led_blue=off' in req: led_blue.value(0)
             elif '/?servo=open' in req: servo.duty(115)
+            elif '/?servo=half' in req: servo.duty(77)
             elif '/?servo=close' in req: servo.duty(40)
             conn.send('HTTP/1.1 200 OK\nContent-Type: text/html\nConnection: close\n\n' + web_page())
             conn.close()
