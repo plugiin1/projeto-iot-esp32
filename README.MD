@@ -158,6 +158,6 @@ IOT/
 ---
 
 <p align="center">
-  <sub> Projeto IoT: Automação Residencial &copy; 2026 — Desenvolvido como requisito de avaliação acadêmica para a disciplina de Internet das Coisas (IoT) e desenvolvimento com microcontroladores..</sub>
+  <sub> Automação Residencial &copy; 2026 — Desenvolvido como requisito de avaliação acadêmica para a disciplina de Internet das Coisas (IoT)</sub>
 </p>
 
