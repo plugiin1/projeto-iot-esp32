@@ -154,4 +154,10 @@ IOT/
 ## 👨‍💻 Autor
 
 **Felipe Barbosa Miranda**
-Desenvolvido como requisito de avaliação acadêmica para a disciplina de Internet das Coisas (IoT) e desenvolvimento com microcontroladores.
+
+---
+
+<p align="center">
+  <sub> Projeto IoT: Automação Residencial &copy; 2026 — Desenvolvido como requisito de avaliação acadêmica para a disciplina de Internet das Coisas (IoT) e desenvolvimento com microcontroladores..</sub>
+</p>
+
