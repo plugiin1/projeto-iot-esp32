@@ -69,4 +69,4 @@ A estrutura enviada pelo Node-RED espera uma planilha configurada com as seguint
 
 ## 👨‍💻 Autor
 
-Desenvolvido como requisito de avaliação acadêmica para a disciplina de Internet das Coisas (IoT) e desenvolvimento com microcontroladores.
+Aluno: Felipe Barbosa Miranda
