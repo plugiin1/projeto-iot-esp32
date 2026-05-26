@@ -69,4 +69,4 @@ A estrutura enviada pelo Node-RED espera uma planilha configurada com as seguint
 
 ## 👨‍💻 Autor
 
-Aluno: Felipe Barbosa Miranda
+Felipe Barbosa Miranda
